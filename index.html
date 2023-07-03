@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Project</title>
+    <meta name="description" content="This is a project to test if the knowledge is well acquired">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Hello_World">Hello World</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Comments">Comments</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Basic_Operations">Basic Operations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Data_Types">Data Types</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#More_Mathematical_Operations">More Mathematical Operations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Booleans_And_Comparisons">Booleans And Comparisons</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#If_Statements">If Statements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Else_Statements">Else Statements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Boolean_Operators">Boolean Operators</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#While_Loops">While Loops</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Python is a high-level programming language, considered one of the easiest to learn and understand. It has become very popular in recent years due to its versatility and ability to solve complex problems in various areas of programming. It is widely used in web development, artificial intelligence, data science, automation, and script creation.
+<br><br>
+In this technical documentation, we will delve into the basic concepts of Python, from syntax to the most common data structures, to help readers gain a solid understanding of the language and prepare them to tackle more advanced projects. In each chapter, practical examples will be explained and exercises will be included to put into practice what has been learned. This documentation is designed for people who are just starting to learn programming with Python or who want to refresh their knowledge.</p>
+      </section>
+      <!--Hello World-->
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <p>The <span class="bold">print()</span> function is one of the most basic functions in Python and its use is very simple. It serves to display a message or value on the console or screen. The message or value to be displayed is written within parentheses and quotation marks, or just between parentheses if it's a variable or a value of another type, but we'll cover that later.
+<br><br>
+For example, to generate a "Hello World" with the <span class="bold">print()</span> function, the following would be written:</p>
+        <code>print("Hello World")</code>
+        <p>The output on the screen would be:</p>
+        <code>Hello World</code>
+        <p>It is also possible to print multiple values or messages on a single line, separating them with a comma. For example:</p>
+        <code>print("Hello", "World")</code>
+        <p>The output on the screen would be the same:</p>
+        <code>Hello World</code>
+        <p>The <span class="bold">print()</span> function also accepts several optional parameters such as:</p>
+        <ul>
+          <li><span class="bold">sep</span>: which allows to specify a separator between elements, the default value is ' ' (space).</li>
+          <li><span class="bold">end</span>: which allows to specify the end of the print statement, the default value is '\n' (new line)</li>
+        </ul>
+        <p>For example:</p>
+        <code>print("Hello", "World", sep=", ", end="!\n")</code>
+        <p>The output on the screen would be:</p>
+        <code>Hello, World!</code>
+      </section>
+      <!--Comments-->
+      <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <h3>What are comments in Python?</h3>
+        <p>Comments in Python are lines of text used to explain code or leave notes for yourself or other developers. Comments are not part of the actual code and do not affect the operation of the program. However, they are essential to understand the code and to make it easier to maintain and modify.<p>
+        <h3>Comment syntax</h3>
+        <p>To write a comment in Python, use the "#" symbol at the beginning of the line. Anything you type after the "#" will be treated as a comment and will not be executed by Python. For example:</p>
+        <code>#I am a comment. And I'm here to explain that the following line of code prints "Hello World" to the console.<br>print("Hello World")
+        </code>
+        <h3>Practical use of comments</h3>
+        <ul>
+          <li>Documentation: Comments are a great way to document your code and explain its purpose and operation. This can be especially useful when other developers or even your future self need to understand the code.</li>
+          <li>Debugging: Comments can be used to temporarily disable a section of code, or to leave notes about a specific problem or bug.</li>
+          <li>Easier to read: Comments can make code easier to understand and follow, especially when it comes to complex or feature-rich code.</li>
+          <li>Communication: Comments are a way to communicate with other developers or team members, either to discuss a problem or to ask for help.</li>
+          <li>Improve maintainability: Comments help understand the code and make it easier to maintain, as they can help identify where bugs are found or understand how a specific part of the code works.</li>
+        </ul>
+        <h3>Tips for writting comments</h3>
+        <ul>
+          <li>Use clear and precise language.</li>
+          <li>Avoid unnecessary or duplicate comments.</li>
+          <li>Keep comments updated as the code changes.</li>
+          <li>Use comments to explain why you did something, not just how you did it.</li>
+          <li>Try to make your comments self-explanatory, that is, the code and the comments complement each other.</li>
+        </ul>
+      </section>
+      <!--Variables-->
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <h3>What are variables in Python?</h3>
+        <p>In programming, a variable is a space in the computer's memory where a value is stored, which can be used and modified at different times during the execution of the program. In Python, variables are used to store and manipulate data.</p>
+        <h3>Declaration and assignment of values ​​to variables</h3>
+        <p>To declare a variable in Python, the "=" (equality) operator is used. The left side of the operator is the name of the variable, which can contain any combination of letters, numbers, and underscores, but must start with a letter or underscore (not a number), and the right side is the value that is assigned to the variable. For example:</p>
+        <code>#The following line of code assigns "Hello World" to a variable called hello.<br>hello = "Hello World"
+        </code>
+        <p>Now we can print the variable, and as you'll see, the result is the same as printing the value itself.</p>
+        <code>
+          print("Hello World")<br>print(hello)<br>print(hello, "Hello World", sep=" equals ")</code>
+        <p>The output on the screen would be:</p>
+        <code>Hello World<br>Hello World<br>Hello World equals Hello World</code>
+        <p>We can also change the value of the variable:</p>
+        <code>
+          #Declaring variable and printing it<br>hello = "Hello World"<br>print(hello)<br>#Changing the value of the variable and printing it to show the change<br>hello = "Hello Universe"<br>print(hello)
+        </code>
+        <p>The output on the screen would be:</p>
+        <code>
+          Hello World<br>Hello Universe
+        </code>
+        <h3>Tips for Using Variables</h3>
+        <ul>
+          <li>Use descriptive names for variables to make it easy to understand their content and usage. For example, instead of using names like "x" or "temp", use names like "number_of_customers" or "average_temperature".</li>
+          <li>Avoid using Python reserved words as variable names. These words have a special meaning in the language and cannot be used as variable names.</li>
+          <li>Be sure to assign a value to the variable before using it. If you try to use a variable before assigning it a value, you will get an error.</li>
+          <li>Use variables with different names for different values, thus avoiding accidental overwriting of values.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Basic_Operations">
+        <header>Basic Operations</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="More_Mathematical_Operations">
+        <header>More Mathematical Operations</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="Booleans_And_Comparisons">
+        <header>Booleans And Comparisons</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="If_Statements">
+        <header>If Statements</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="Else_Statements">
+        <header>Else Statements</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="Boolean_Operators">
+        <header>Boolean Operators</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section class="main-section" id="While_Loops">
+        <header>While Loops</header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+    </main> 
+  </body>
+</html>
